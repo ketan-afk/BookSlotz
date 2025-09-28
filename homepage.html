@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BookSlotz — Play More. Plan Less.</title>
+  <meta name="description" content="BookSlotz helps players discover venues and book sports turf slots in real time. Join the early access list for Android and iOS." />
+  <meta property="og:title" content="BookSlotz — Play More. Plan Less." />
+  <meta property="og:description" content="Discover venues, book slots in seconds, and meet players near you. Early access for Play Store & App Store." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1518602164578-cb74993f0151?q=80&w=1600&auto=format&fit=crop" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2300DC82'/%3E%3Cpath d='M22 34l8-14 12 24' stroke='%2300332E' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ECFEF6', 100: '#D1FADF', 200: '#A6F4C5', 300: '#6CE9A6', 400: '#32D583', 500: '#12B76A', 600: '#039855', 700: '#027A48', 800: '#05603A', 900: '#054F31'
+            },
+          },
+          boxShadow: {
+            glow: '0 10px 30px rgba(18,183,106,0.35)',
+          },
+          backgroundImage: {
+            grid:'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.08) 1px, transparent 0)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .backdrop-blur-10{backdrop-filter: blur(10px);} /* Safari support */
+  </style>
+</head>
+<body class="bg-neutral-950 text-white antialiased selection:bg-brand-300/30">
+  <!-- Header -->
+  <header class="fixed inset-x-0 top-0 z-50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mt-4 flex items-center justify-between rounded-2xl bg-white/5 p-3 ring-1 ring-white/10 backdrop-blur-10">
+        <a href="#" class="group inline-flex items-center gap-2">
+          <span class="inline-grid h-9 w-9 place-items-center rounded-xl bg-brand-500 text-neutral-900 shadow-glow">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5"><path fill="currentColor" d="M4 12a8 8 0 1 1 16 0c0 3.563-3.2 6.707-7.155 7.82a1 1 0 0 1-.69 0C7.2 18.707 4 15.563 4 12Z"/></svg>
+          </span>
+          <span class="text-lg font-semibold tracking-tight">BookSlotz</span>
+        </a>
+        <nav class="hidden items-center gap-6 text-sm font-medium sm:flex">
+          <a href="#features" class="text-white/80 hover:text-white">Features</a>
+          <a href="#how" class="text-white/80 hover:text-white">How it works</a>
+          <a href="#early" class="text-white/80 hover:text-white">Early Access</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="#early" class="hidden rounded-xl bg-brand-500 px-4 py-2 text-sm font-semibold text-neutral-900 shadow-glow transition hover:translate-y-[-1px] hover:bg-brand-400 sm:inline-block">Get Early Access</a>
+          <button id="mobileMenuBtn" class="sm:hidden inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 ring-1 ring-white/15">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobileMenu" class="mt-2 hidden rounded-2xl bg-white/5 p-3 ring-1 ring-white/10 backdrop-blur-10 sm:hidden">
+        <a href="#features" class="block rounded-lg px-3 py-2 text-white/80 hover:bg-white/5">Features</a>
+        <a href="#how" class="block rounded-lg px-3 py-2 text-white/80 hover:bg-white/5">How it works</a>
+        <a href="#early" class="block rounded-lg px-3 py-2 text-white/80 hover:bg-white/5">Early Access</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative isolate overflow-hidden pt-28">
+    <div class="absolute inset-0 -z-10">
+      <!-- Background video (royalty-free from Pexels) -->
+      <video class="h-full w-full object-cover" src="https://videos.pexels.com/video-files/4761782/4761782-uhd_2560_1440_25fps.mp4" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1518602164578-cb74993f0151?q=80&w=1600&auto=format&fit=crop"></video>
+      <div class="absolute inset-0 bg-gradient-to-b from-neutral-950/70 via-neutral-950/60 to-neutral-950"></div>
+    </div>
+
+    <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:py-24">
+      <div>
+        <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80">
+          <span class="inline-flex h-2 w-2 rounded-full bg-brand-400"></span>
+          Coming soon on Play Store & App Store
+        </div>
+        <h1 class="mt-4 text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">
+          Play More. <span class="text-brand-400">Plan Less.</span>
+        </h1>
+        <p class="mt-4 max-w-xl text-white/80">Discover nearby venues, book turf slots in seconds, and connect with players using <span class="font-semibold text-white">Meet & Play</span>. Join the early access list to be the first to try BookSlotz.</p>
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <a href="#early" class="rounded-2xl bg-brand-500 px-6 py-3 text-sm font-semibold text-neutral-900 shadow-glow transition hover:translate-y-[-1px] hover:bg-brand-400">Get Early Access</a>
+          <a href="#features" class="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 hover:bg-white/10">Explore features</a>
+        </div>
+        <div class="mt-8 flex items-center gap-4">
+          <!-- Store badges (placeholders) -->
+          <a class="inline-flex items-center gap-3 rounded-xl border border-white/10 bg-black/60 px-4 py-3 ring-1 ring-white/10" href="#" aria-label="Play Store (coming soon)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6"><path fill="white" d="M3 4.27v15.46c0 .71.77 1.16 1.38.8l10.21-6.09z"/><path fill="#34A853" d="M21 12a2 2 0 0 0-.74-1.54l-2.87-1.71-3.8 3.42 3.8 3.42 2.87-1.71A2 2 0 0 0 21 12"/><path fill="#FBBC04" d="m14.6 8.75-2.98-1.78L4.38 3.34C3.77 2.98 3 3.43 3 4.14v.13z"/><path fill="#4285F4" d="M3 19.73v.13c0 .71.77 1.16 1.38.8l7.24-4.31 3-1.78z"/></svg>
+            <div class="text-left">
+              <div class="text-[10px] leading-none text-white/70">Get it on</div>
+              <div class="-mt-0.5 text-sm font-semibold">Google Play</div>
+            </div>
+          </a>
+          <a class="inline-flex items-center gap-3 rounded-xl border border-white/10 bg-black/60 px-4 py-3 ring-1 ring-white/10" href="#" aria-label="App Store (coming soon)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6"><path fill="white" d="M19.665 17.098c-.355.818-.777 1.572-1.266 2.261-.666.95-1.21 1.602-1.636 1.954-.653.6-1.353.912-2.1.937-.537 0-1.185-.153-1.945-.458-.762-.306-1.463-.459-2.103-.459-.666 0-1.383.153-2.152.459-.77.305-1.392.464-1.866.478-.72.031-1.433-.28-2.14-.937-.458-.4-1.03-1.085-1.716-2.053-.736-1.028-1.34-2.222-1.81-3.581-.507-1.495-.761-2.94-.761-4.337 0-1.602.345-2.982 1.037-4.141.543-.937 1.267-1.681 2.172-2.232C3.934 3.33 4.934 3.06 6.03 3.1c.537.015 1.236.178 2.097.49.859.311 1.412.468 1.657.468.19 0 .793-.19 1.813-.572  .972-.357 1.792-.505 2.46-.444 1.817.153 3.182.861 4.092 2.124-1.623.984-2.433 2.333-2.426 4.047.007 1.35.505 2.47 1.493 3.358.444.42.944.744 1.498.972-.12.355-.247.69-.379 1.004z"/></svg>
+            <div class="text-left">
+              <div class="text-[10px] leading-none text-white/70">Download on the</div>
+              <div class="-mt-0.5 text-sm font-semibold">App Store</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="pointer-events-none absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-brand-500/10 via-transparent to-brand-500/10 blur-2xl"></div>
+        <div class="relative rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-2xl ring-1 ring-white/10">
+          <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1200&auto=format&fit=crop" alt="Players on a football turf at night" class="h-72 w-full rounded-xl object-cover"/>
+          <div class="mt-4 grid grid-cols-3 gap-3 text-center text-xs">
+            <div class="rounded-xl bg-white/5 p-3">
+              <div class="text-2xl font-bold">120+</div>
+              <div class="text-white/70">Venues onboarding</div>
+            </div>
+            <div class="rounded-xl bg-white/5 p-3">
+              <div class="text-2xl font-bold">6+</div>
+              <div class="text-white/70">Cities (Phase‑1)</div>
+            </div>
+            <div class="rounded-xl bg-white/5 p-3">
+              <div class="text-2xl font-bold">30s</div>
+              <div class="text-white/70">Avg. booking time</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="relative py-20">
+    <div class="absolute inset-0 bg-grid bg-[size:20px_20px]"></div>
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">What makes BookSlotz different</h2>
+        <p class="mt-3 text-white/80">Built for Indian venues and players—fast, transparent, and social.</p>
+      </div>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Feature card -->
+        <div class="group rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:bg-white/10">
+          <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-500/20">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3M5 11h14M5 19h14M5 15h14"/></svg>
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">Real‑time slot visibility</h3>
+          <p class="mt-1 text-sm text-white/75">See live availability with transparent pricing, including peak and off‑peak rates.</p>
+        </div>
+        <div class="group rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:bg-white/10">
+          <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-500/20">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-5M12 7V3m0 0L8 7m4-4l4 4M7 20H2v-5"/></svg>
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">Meet & Play</h3>
+          <p class="mt-1 text-sm text-white/75">Opt‑in to receive join requests and fill your team quickly and safely.</p>
+        </div>
+        <div class="group rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:bg-white/10">
+          <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-500/20">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 1.79-3 4s1.343 4 3 4 3-1.79 3-4-1.343-4-3-4Z M3 12h3m12 0h3M4.5 6.5l2.1 2.1M17.4 17.4l2.1 2.1M4.5 17.5l2.1-2.1M17.4 6.6l2.1-2.1"/></svg>
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">Multi‑sport ready</h3>
+          <p class="mt-1 text-sm text-white/75">Cricket, football, pickleball, and more—one app, all venues.</p>
+        </div>
+        <div class="group rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:bg-white/10">
+          <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-500/20">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-2.21 0-4 1.343-4 3 0 1.657 1.79 3 4 3s4-1.343 4-3c0-1.657-1.79-3-4-3Zm0 6v6"/></svg>
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">Secure payments</h3>
+          <p class="mt-1 text-sm text-white/75">Fast, UPI‑first checkout with trusted gateways. GST invoice support for venues.</p>
+        </div>
+        <div class="group rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:bg-white/10">
+          <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-500/20">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">Instant confirmations</h3>
+          <p class="mt-1 text-sm text-white/75">No phone calls. No WhatsApp chaos. Book and get confirmed instantly.</p>
+        </div>
+        <div class="group rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:bg-white/10">
+          <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-500/20">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3 class="mt-4 text-lg font-semibold">Reminders & receipts</h3>
+          <p class="mt-1 text-sm text-white/75">Get smart reminders, invoices, and team invites in one place.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="relative py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid items-center gap-10 lg:grid-cols-2">
+        <div>
+          <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">From search to play in under a minute</h2>
+          <ol class="mt-6 space-y-5">
+            <li class="flex gap-4">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand-500 text-neutral-900 font-bold">1</span>
+              <div>
+                <h3 class="font-semibold">Find a venue</h3>
+                <p class="text-white/80">Browse verified turfs by city, sport, and price. See live availability.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand-500 text-neutral-900 font-bold">2</span>
+              <div>
+                <h3 class="font-semibold">Pick a slot</h3>
+                <p class="text-white/80">Choose your time and number of boxes. Transparent peak/off‑peak pricing.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand-500 text-neutral-900 font-bold">3</span>
+              <div>
+                <h3 class="font-semibold">Pay & play</h3>
+                <p class="text-white/80">UPI or card checkout. Get instant confirmation and share invites.</p>
+              </div>
+            </li>
+          </ol>
+          <a href="#early" class="mt-8 inline-flex items-center gap-2 rounded-2xl bg-white px-6 py-3 font-semibold text-neutral-900 ring-1 ring-white/20 hover:bg-white/90">
+            Join the early access list
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="relative">
+          <div class="pointer-events-none absolute -inset-6 rounded-[2rem] bg-gradient-to-tr from-brand-500/10 via-transparent to-brand-500/10 blur-2xl"></div>
+          <img class="relative w-full rounded-[2rem] border border-white/10 object-cover ring-1 ring-white/10" src="https://images.unsplash.com/photo-1509077613385-f89402467146?w=300&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHR1cmZ8ZW58MHx8MHx8fDA%3D" alt="Aerial of sports turfs" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Early Access Form -->
+  <section id="early" class="relative py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid items-start gap-8 lg:grid-cols-2">
+        <div>
+          <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Get early access</h2>
+          <p class="mt-3 text-white/80">Be among the first to try BookSlotz when we launch in your city. We’ll notify you as soon as the app is live.</p>
+          <ul class="mt-6 space-y-3 text-sm text-white/80">
+            <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-md bg-brand-500 text-neutral-900">✔</span> Priority invite on Android & iOS</li>
+            <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-md bg-brand-500 text-neutral-900">✔</span> Early‑bird offers and venue credits</li>
+            <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-md bg-brand-500 text-neutral-900">✔</span> Access to beta features like Meet & Play</li>
+          </ul>
+        </div>
+
+        <form id="waitlistForm" class="rounded-3xl border border-white/10 bg-white/5 p-6 ring-1 ring-white/10">
+          <!-- NOTE: To wire up with Formspree or your backend, set the `action` and method="POST" and remove JS handler below. -->
+          <!-- <form action="https://formspree.io/f/your-id" method="POST"> -->
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="sm:col-span-2">
+              <label for="name" class="mb-1 block text-sm text-white/80">Full name</label>
+              <input id="name" name="name" required autocomplete="name" class="w-full rounded-xl border border-white/10 bg-neutral-900/60 px-4 py-3 text-white placeholder-white/40 outline-none ring-brand-500/0 transition focus:ring-2" placeholder="e.g., Arjun Patel" />
+            </div>
+            <div>
+              <label for="email" class="mb-1 block text-sm text-white/80">Email</label>
+              <input id="email" name="email" required type="email" autocomplete="email" class="w-full rounded-xl border border-white/10 bg-neutral-900/60 px-4 py-3 text-white placeholder-white/40 outline-none ring-brand-500/0 transition focus:ring-2" placeholder="you@example.com" />
+            </div>
+            <div>
+              <label for="phone" class="mb-1 block text-sm text-white/80">Mobile</label>
+              <input id="phone" name="phone" required type="tel" pattern="^(\+?91[- ]?)?[6-9]\d{9}$" class="w-full rounded-xl border border-white/10 bg-neutral-900/60 px-4 py-3 text-white placeholder-white/40 outline-none ring-brand-500/0 transition focus:ring-2" placeholder="+91 98xxxxxx10" />
+              <p class="mt-1 text-xs text-white/60">Indian numbers supported. Use +91 or 10‑digit format.</p>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="city" class="mb-1 block text-sm text-white/80">City</label>
+              <select id="city" name="city" class="w-full rounded-xl border border-white/10 bg-neutral-900/60 px-4 py-3 text-white outline-none ring-brand-500/0 transition focus:ring-2">
+                <option value="">Select your city</option>
+                <option>Ahmedabad</option>
+                <option>Surat</option>
+                <option>Vadodara</option>
+                <option>Rajkot</option>
+                <option>Mumbai</option>
+                <option>Pune</option>
+                <option>Bengaluru</option>
+                <option>Hyderabad</option>
+                <option>Chennai</option>
+                <option>Delhi NCR</option>
+                <option>Kolkata</option>
+                <option>Jaipur</option>
+                <option>Indore</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="sm:col-span-2">
+              <label class="inline-flex items-start gap-3 text-sm text-white/80">
+                <input type="checkbox" id="tos" class="mt-1 h-4 w-4 rounded border-white/20 bg-neutral-900/60" required />
+                I agree to receive a one‑time invite and updates about BookSlotz. No spam.
+              </label>
+            </div>
+          </div>
+          <div class="mt-6 flex items-center gap-4">
+            <button id="submitBtn" type="submit" class="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-500 px-6 py-3 font-semibold text-neutral-900 shadow-glow transition hover:translate-y-[-1px] hover:bg-brand-400">
+              <svg id="spinner" class="hidden h-5 w-5 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path></svg>
+              Join the waitlist
+            </button>
+            <p id="formMsg" class="text-sm text-white/70"></p>
+          </div>
+          <input type="text" name="company" id="company" class="hidden" tabindex="-1" autocomplete="off" />
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logos / Social proof -->
+  <section class="py-14">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-6 text-center text-white/70 ring-1 ring-white/10">
+        Trusted by early venue partners in Ahmedabad, Mumbai, Pune, and Bengaluru.
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-neutral-950/80 py-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="inline-grid h-9 w-9 place-items-center rounded-xl bg-brand-500 text-neutral-900">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5"><path fill="currentColor" d="M4 12a8 8 0 1 1 16 0c0 3.563-3.2 6.707-7.155 7.82a1 1 0 0 1-.69 0C7.2 18.707 4 15.563 4 12Z"/></svg>
+            </span>
+            <span class="text-lg font-semibold">BookSlotz</span>
+          </div>
+          <p class="mt-3 text-sm text-white/70">Play More. Plan Less.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold">Company</h4>
+          <ul class="mt-3 space-y-2 text-sm text-white/70">
+            <li><a class="hover:text-white" href="#features">Features</a></li>
+            <li><a class="hover:text-white" href="#how">How it works</a></li>
+            <li><a class="hover:text-white" href="#early">Early Access</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold">Contact</h4>
+          <ul class="mt-3 space-y-2 text-sm text-white/70">
+            <li><a class="hover:text-white" href="mailto:hello@bookslotz.app">hello@bookslotz.app</a></li>
+            <li><a class="hover:text-white" href="#">@bookslotz</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold">Get the app</h4>
+          <div class="mt-3 grid grid-cols-2 gap-3">
+            <a class="rounded-xl border border-white/10 bg-black/60 px-4 py-3 text-center text-sm" href="#">Play Store</a>
+            <a class="rounded-xl border border-white/10 bg-black/60 px-4 py-3 text-center text-sm" href="#">App Store</a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 border-t border-white/10 pt-6 text-center text-xs text-white/60">© <span id="year"></span> BookSlotz. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div id="toast" class="pointer-events-none fixed inset-x-0 top-24 z-[60] mx-auto hidden max-w-md rounded-xl border border-white/10 bg-neutral-900/90 p-4 text-center text-sm ring-1 ring-white/20">
+    <span id="toastMsg">You’re on the list! We’ll email you shortly.</span>
+  </div>
+
+  <script>
+    // Mobile menu
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn?.addEventListener('click', ()=> mobileMenu.classList.toggle('hidden'));
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Form handling (demo). Replace with real endpoint for production.
+    const form = document.getElementById('waitlistForm');
+    const btn = document.getElementById('submitBtn');
+    const spinner = document.getElementById('spinner');
+    const formMsg = document.getElementById('formMsg');
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toastMsg');
+
+    function showToast(msg){
+      toastMsg.textContent = msg; toast.classList.remove('hidden');
+      setTimeout(()=> toast.classList.add('hidden'), 3000);
+    }
+
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      formMsg.textContent='';
+      if (document.getElementById('company').value) { return; } // honeypot
+
+      // Simple validation
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      if(!name || !email || !phone){ formMsg.textContent='Please fill all required fields.'; return; }
+
+      btn.disabled = true; spinner.classList.remove('hidden');
+
+      try {
+        // Simulate successful submit and persist locally
+        const payload = { name, email, phone, city: document.getElementById('city').value, ts: new Date().toISOString() };
+        const list = JSON.parse(localStorage.getItem('bookslotz_waitlist') || '[]');
+        list.push(payload); localStorage.setItem('bookslotz_waitlist', JSON.stringify(list));
+
+        form.reset();
+        showToast("You're on the list! We'll email you closer to launch.");
+      } catch(err){
+        formMsg.textContent = 'Something went wrong. Please try again.';
+      } finally {
+        btn.disabled = false; spinner.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
