@@ -244,9 +244,12 @@
           </ul>
         </div>
 
-        <form id="waitlistForm" class="rounded-3xl border border-white/10 bg-white/5 p-6 ring-1 ring-white/10">
+        <form id="waitlistForm" class="rounded-3xl border border-white/10 bg-white/5 p-6 ring-1 ring-white/10" action="https://api.web3forms.com/submit" method="POST">
           <!-- NOTE: To wire up with Formspree or your backend, set the `action` and method="POST" and remove JS handler below. -->
           <!-- <form action="https://formspree.io/f/your-id" method="POST"> -->
+           <input type="hidden" name="access_key" value="046d4f09-62cb-429e-b724-22060db32313" />
+    <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+    <input type="hidden" name="from_name" value="My Website" />
           <div class="grid gap-4 sm:grid-cols-2">
             <div class="sm:col-span-2">
               <label for="name" class="mb-1 block text-sm text-white/80">Full name</label>
@@ -266,6 +269,10 @@
               <select id="city" name="city" class="w-full rounded-xl border border-white/10 bg-neutral-900/60 px-4 py-3 text-white outline-none ring-brand-500/0 transition focus:ring-2">
                 <option value="">Select your city</option>
                 <option>Ahmedabad</option>
+                <option>Porbandar</option>
+                <option>Junagadh</option>
+                <option>Jamnagar</option>
+                <option>Udaipur</option>
                 <option>Surat</option>
                 <option>Vadodara</option>
                 <option>Rajkot</option>
