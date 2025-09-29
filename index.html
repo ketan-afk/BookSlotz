@@ -244,66 +244,66 @@
           </ul>
         </div>
 
-        <form id="waitlistForm" class="rounded-3xl border border-white/10 bg-white/5 p-6 ring-1 ring-white/10" action="https://api.web3forms.com/submit" method="POST">
-          <!-- NOTE: To wire up with Formspree or your backend, set the `action` and method="POST" and remove JS handler below. -->
-          <!-- <form action="https://formspree.io/f/your-id" method="POST"> -->
-           <input type="hidden" name="access_key" value="046d4f09-62cb-429e-b724-22060db32313" />
-    <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
-    <input type="hidden" name="from_name" value="My Website" />
-          <div class="grid gap-4 sm:grid-cols-2">
-            <div class="sm:col-span-2">
-              <label for="name" class="mb-1 block text-sm text-white/80">Full name</label>
-              <input id="name" name="name" required autocomplete="name" class="w-full rounded-xl border border-white/10 bg-neutral-900/60 px-4 py-3 text-white placeholder-white/40 outline-none ring-brand-500/0 transition focus:ring-2" placeholder="e.g., Arjun Patel" />
-            </div>
-            <div>
-              <label for="email" class="mb-1 block text-sm text-white/80">Email</label>
-              <input id="email" name="email" required type="email" autocomplete="email" class="w-full rounded-xl border border-white/10 bg-neutral-900/60 px-4 py-3 text-white placeholder-white/40 outline-none ring-brand-500/0 transition focus:ring-2" placeholder="you@example.com" />
-            </div>
-            <div>
-              <label for="phone" class="mb-1 block text-sm text-white/80">Mobile</label>
-              <input id="phone" name="phone" required type="tel" pattern="^(\+?91[- ]?)?[6-9]\d{9}$" class="w-full rounded-xl border border-white/10 bg-neutral-900/60 px-4 py-3 text-white placeholder-white/40 outline-none ring-brand-500/0 transition focus:ring-2" placeholder="+91 98xxxxxx10" />
-              <p class="mt-1 text-xs text-white/60">Indian numbers supported. Use +91 or 10‑digit format.</p>
-            </div>
-            <div class="sm:col-span-2">
-              <label for="city" class="mb-1 block text-sm text-white/80">City</label>
-              <select id="city" name="city" class="w-full rounded-xl border border-white/10 bg-neutral-900/60 px-4 py-3 text-white outline-none ring-brand-500/0 transition focus:ring-2">
-                <option value="">Select your city</option>
-                <option>Ahmedabad</option>
-                <option>Porbandar</option>
-                <option>Junagadh</option>
-                <option>Jamnagar</option>
-                <option>Udaipur</option>
-                <option>Surat</option>
-                <option>Vadodara</option>
-                <option>Rajkot</option>
-                <option>Mumbai</option>
-                <option>Pune</option>
-                <option>Bengaluru</option>
-                <option>Hyderabad</option>
-                <option>Chennai</option>
-                <option>Delhi NCR</option>
-                <option>Kolkata</option>
-                <option>Jaipur</option>
-                <option>Indore</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div class="sm:col-span-2">
-              <label class="inline-flex items-start gap-3 text-sm text-white/80">
-                <input type="checkbox" id="tos" class="mt-1 h-4 w-4 rounded border-white/20 bg-neutral-900/60" required />
-                I agree to receive a one‑time invite and updates about BookSlotz. No spam.
-              </label>
-            </div>
-          </div>
-          <div class="mt-6 flex items-center gap-4">
-            <button id="submitBtn" type="submit" class="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-500 px-6 py-3 font-semibold text-neutral-900 shadow-glow transition hover:translate-y-[-1px] hover:bg-brand-400">
-              <svg id="spinner" class="hidden h-5 w-5 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path></svg>
-              Join the waitlist
-            </button>
-            <p id="formMsg" class="text-sm text-white/70"></p>
-          </div>
-          <input type="text" name="company" id="company" class="hidden" tabindex="-1" autocomplete="off" />
-        </form>
+        <form
+  action="https://api.web3forms.com/submit"
+  method="POST"
+  class="rounded-3xl border border-white/10 bg-white/5 p-6 ring-1 ring-white/10"
+>
+  <!-- Web3Forms -->
+  <input type="hidden" name="access_key" value="046d4f09-62cb-429e-b724-22060db32313" />
+  <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+  <input type="hidden" name="from_name" value="BookSlotz Website" />
+  <!-- optional: where to send user after success -->
+  <input type="hidden" name="redirect" value="https://yourdomain.com/thanks.html" />
+  <!-- optional: set reply-to to the user’s email -->
+  <input type="hidden" name="reply_to" value="{email}" />
+
+  <div class="grid gap-4 sm:grid-cols-2">
+    <div class="sm:col-span-2">
+      <label for="name" class="mb-1 block text-sm text-white/80">Full name</label>
+      <input id="name" name="name" required autocomplete="name"
+        class="w-full rounded-xl border border-white/10 bg-neutral-900/60 px-4 py-3 text-white placeholder-white/40 outline-none transition focus:ring-2"
+        placeholder="e.g., Arjun Patel" />
+    </div>
+
+    <div>
+      <label for="email" class="mb-1 block text-sm text-white/80">Email</label>
+      <input id="email" name="email" type="email" required autocomplete="email"
+        class="w-full rounded-xl border border-white/10 bg-neutral-900/60 px-4 py-3 text-white placeholder-white/40 outline-none transition focus:ring-2"
+        placeholder="you@example.com" />
+    </div>
+
+    <div>
+      <label for="phone" class="mb-1 block text-sm text-white/80">Mobile</label>
+      <!-- relaxed: allows +91, spaces, dashes -->
+      <input id="phone" name="phone" type="tel"
+        pattern="^(\+?91[\s-]?)?[0-9\s-]{10,}$"
+        class="w-full rounded-xl border border-white/10 bg-neutral-900/60 px-4 py-3 text-white placeholder-white/40 outline-none transition focus:ring-2"
+        placeholder="+91 98xxxxxx10" />
+      <p class="mt-1 text-xs text-white/60">Indian numbers supported. Use +91 or 10-digit format.</p>
+    </div>
+
+    <div class="sm:col-span-2">
+      <label class="inline-flex items-start gap-3 text-sm text-white/80">
+        <input type="checkbox" id="tos" name="consent"
+          class="mt-1 h-4 w-4 rounded border-white/20 bg-neutral-900/60" required />
+        I agree to receive a one-time invite and updates about BookSlotz. No spam.
+      </label>
+    </div>
+  </div>
+
+  <div class="mt-6 flex items-center gap-4">
+    <button type="submit"
+      class="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-500 px-6 py-3 font-semibold text-neutral-900 shadow-glow transition hover:translate-y-[-1px] hover:bg-brand-400">
+      Join the waitlist
+    </button>
+    <p class="text-sm text-white/70"></p>
+  </div>
+
+  <!-- simple honeypot -->
+  <input type="text" name="company" id="company" class="hidden" tabindex="-1" autocomplete="off" />
+</form>
+
       </div>
     </div>
   </section>
