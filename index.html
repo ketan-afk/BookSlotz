@@ -20,23 +20,42 @@
               50: '#ECFEF6', 100: '#D1FADF', 200: '#A6F4C5', 300: '#6CE9A6', 400: '#32D583', 500: '#12B76A', 600: '#039855', 700: '#027A48', 800: '#05603A', 900: '#054F31'
             },
           },
-          boxShadow: {
-            glow: '0 10px 30px rgba(18,183,106,0.35)',
-          },
-          backgroundImage: {
-            grid:'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.08) 1px, transparent 0)'
-          }
+          boxShadow: { glow: '0 10px 30px rgba(18,183,106,0.35)' },
+          backgroundImage: { grid:'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.08) 1px, transparent 0)'}
         }
       }
     }
   </script>
-  <style>
-    .backdrop-blur-10{backdrop-filter: blur(10px);} /* Safari support */
-  </style>
+  <style>.backdrop-blur-10{backdrop-filter: blur(10px);} /* Safari support */</style>
+
+  <!-- JSON-LD Organization (update placeholders) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "BookSlotz",
+    "legalName": "BookSlotz",
+    "url": "https://bookslotz.in/",
+    "logo": "https://bookslotz.in/logo.png",
+    "email": "info@bookslotz.in",
+    "telephone": "+918000071714",
+    "sameAs": ["https://www.instagram.com/bookslotz"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "T5 Balaji Stone",
+      "addressLocality": "Porbandar",
+      "addressRegion": "Gujarat",
+      "postalCode": "360575",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
 </head>
 <body class="bg-neutral-950 text-white antialiased selection:bg-brand-300/30">
+  
+
   <!-- Header -->
-  <header class="fixed inset-x-0 top-0 z-50">
+  <header class="fixed inset-x-0 top-0 z-40">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="mt-4 flex items-center justify-between rounded-2xl bg-white/5 p-3 ring-1 ring-white/10 backdrop-blur-10">
         <a href="#" class="group inline-flex items-center gap-2">
@@ -48,6 +67,7 @@
         <nav class="hidden items-center gap-6 text-sm font-medium sm:flex">
           <a href="#features" class="text-white/80 hover:text-white">Features</a>
           <a href="#how" class="text-white/80 hover:text-white">How it works</a>
+          <a href="#company" class="text-white/80 hover:text-white">Company</a>
           <a href="#early" class="text-white/80 hover:text-white">Early Access</a>
         </nav>
         <div class="flex items-center gap-3">
@@ -60,15 +80,15 @@
       <div id="mobileMenu" class="mt-2 hidden rounded-2xl bg-white/5 p-3 ring-1 ring-white/10 backdrop-blur-10 sm:hidden">
         <a href="#features" class="block rounded-lg px-3 py-2 text-white/80 hover:bg-white/5">Features</a>
         <a href="#how" class="block rounded-lg px-3 py-2 text-white/80 hover:bg-white/5">How it works</a>
+        <a href="#company" class="block rounded-lg px-3 py-2 text-white/80 hover:bg-white/5">Company</a>
         <a href="#early" class="block rounded-lg px-3 py-2 text-white/80 hover:bg-white/5">Early Access</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero (unchanged aside from header link) -->
   <section class="relative isolate overflow-hidden pt-28">
     <div class="absolute inset-0 -z-10">
-      <!-- Background video (royalty-free from Pexels) -->
       <video class="h-full w-full object-cover" src="https://videos.pexels.com/video-files/4761782/4761782-uhd_2560_1440_25fps.mp4" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1518602164578-cb74993f0151?q=80&w=1600&auto=format&fit=crop"></video>
       <div class="absolute inset-0 bg-gradient-to-b from-neutral-950/70 via-neutral-950/60 to-neutral-950"></div>
     </div>
@@ -88,7 +108,6 @@
           <a href="#features" class="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 hover:bg-white/10">Explore features</a>
         </div>
         <div class="mt-8 flex items-center gap-4">
-          <!-- Store badges (placeholders) -->
           <a class="inline-flex items-center gap-3 rounded-xl border border-white/10 bg-black/60 px-4 py-3 ring-1 ring-white/10" href="#" aria-label="Play Store (coming soon)">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6"><path fill="white" d="M3 4.27v15.46c0 .71.77 1.16 1.38.8l10.21-6.09z"/><path fill="#34A853" d="M21 12a2 2 0 0 0-.74-1.54l-2.87-1.71-3.8 3.42 3.8 3.42 2.87-1.71A2 2 0 0 0 21 12"/><path fill="#FBBC04" d="m14.6 8.75-2.98-1.78L4.38 3.34C3.77 2.98 3 3.43 3 4.14v.13z"/><path fill="#4285F4" d="M3 19.73v.13c0 .71.77 1.16 1.38.8l7.24-4.31 3-1.78z"/></svg>
             <div class="text-left">
@@ -109,10 +128,7 @@
       <div class="relative">
         <div class="pointer-events-none absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-brand-500/10 via-transparent to-brand-500/10 blur-2xl"></div>
         <div class="relative rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-2xl ring-1 ring-white/10">
-          <img src="bookslotz_Mockup.png" 
-     alt="Players on a football turf at night" 
-     class="w-full rounded-xl object-contain"/>
-
+          <img src="bookslotz_Mockup.png" alt="Players on a football turf at night" class="w-full rounded-xl object-contain"/>
           <div class="mt-4 grid grid-cols-3 gap-3 text-center text-xs">
             <div class="rounded-xl bg-white/5 p-3">
               <div class="text-2xl font-bold">120+</div>
@@ -132,7 +148,7 @@
     </div>
   </section>
 
-  <!-- Features -->
+  <!-- Features (unchanged) -->
   <section id="features" class="relative py-20">
     <div class="absolute inset-0 bg-grid bg-[size:20px_20px]"></div>
     <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -141,7 +157,7 @@
         <p class="mt-3 text-white/80">Built for Indian venues and players—fast, transparent, and social.</p>
       </div>
       <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- Feature card -->
+        <!-- Cards ... (kept same as your version) -->
         <div class="group rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:bg-white/10">
           <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-500/20">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3M5 11h14M5 19h14M5 15h14"/></svg>
@@ -188,7 +204,7 @@
     </div>
   </section>
 
-  <!-- How it works -->
+  <!-- How it works (unchanged) -->
   <section id="how" class="relative py-20">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="grid items-center gap-10 lg:grid-cols-2">
@@ -230,7 +246,7 @@
     </div>
   </section>
 
-  <!-- Early Access Form -->
+  <!-- Early Access Form wired to Web3Forms -->
   <section id="early" class="relative py-20">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="grid items-start gap-8 lg:grid-cols-2">
@@ -244,66 +260,101 @@
           </ul>
         </div>
 
-        <form
-  action="https://api.web3forms.com/submit"
-  method="POST"
-  class="rounded-3xl border border-white/10 bg-white/5 p-6 ring-1 ring-white/10"
->
-  <!-- Web3Forms -->
-  <input type="hidden" name="access_key" value="046d4f09-62cb-429e-b724-22060db32313" />
-  <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
-  <input type="hidden" name="from_name" value="BookSlotz Website" />
-  <!-- optional: where to send user after success -->
-  <input type="hidden" name="redirect" value="https://yourdomain.com/thanks.html" />
-  <!-- optional: set reply-to to the user’s email -->
-  <input type="hidden" name="reply_to" value="{email}" />
+        <form id="waitlistForm" action="https://api.web3forms.com/submit" method="POST" class="rounded-3xl border border-white/10 bg-white/5 p-6 ring-1 ring-white/10">
+          <input type="hidden" name="access_key" value="046d4f09-62cb-429e-b724-22060db32313" />
+          <input type="hidden" name="from_name" value="BookSlotz Waitlist" />
+          <input type="hidden" name="subject" value="New BookSlotz Early Access Signup" />
+          <input type="hidden" name="botcheck" id="botcheck" value="" />
 
-  <div class="grid gap-4 sm:grid-cols-2">
-    <div class="sm:col-span-2">
-      <label for="name" class="mb-1 block text-sm text-white/80">Full name</label>
-      <input id="name" name="name" required autocomplete="name"
-        class="w-full rounded-xl border border-white/10 bg-neutral-900/60 px-4 py-3 text-white placeholder-white/40 outline-none transition focus:ring-2"
-        placeholder="e.g., Arjun Patel" />
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="sm:col-span-2">
+              <label for="name" class="mb-1 block text-sm text-white/80">Full name</label>
+              <input id="name" name="name" required autocomplete="name" class="w-full rounded-xl border border-white/10 bg-neutral-900/60 px-4 py-3 text-white placeholder-white/40 outline-none ring-brand-500/0 transition focus:ring-2" placeholder="e.g., Arjun Patel" />
+            </div>
+            <div>
+              <label for="email" class="mb-1 block text-sm text-white/80">Email</label>
+              <input id="email" name="email" required type="email" autocomplete="email" class="w-full rounded-xl border border-white/10 bg-neutral-900/60 px-4 py-3 text-white placeholder-white/40 outline-none ring-brand-500/0 transition focus:ring-2" placeholder="you@example.com" />
+            </div>
+            <div>
+              <label for="phone" class="mb-1 block text-sm text-white/80">Mobile</label>
+              <input id="phone" name="phone" required type="tel" pattern="^(\+?91[- ]?)?[6-9]\d{9}$" class="w-full rounded-xl border border-white/10 bg-neutral-900/60 px-4 py-3 text-white placeholder-white/40 outline-none ring-brand-500/0 transition focus:ring-2" placeholder="+91 98xxxxxx10" />
+              <p class="mt-1 text-xs text-white/60">Indian numbers supported. Use +91 or 10‑digit format.</p>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="city" class="mb-1 block text-sm text-white/80">City</label>
+              <select id="city" name="city" class="w-full rounded-xl border border-white/10 bg-neutral-900/60 px-4 py-3 text-white outline-none ring-brand-500/0 transition focus:ring-2">
+                <option value="">Select your city</option>
+                <option>Ahmedabad</option>
+                <option>Bengaluru</option>
+                <option>Delhi NCR</option>
+                <option>Gandhidham</option>
+                <option>Hyderabad</option>
+                <option>Indore</option>
+                <option>Jaipur</option>
+                <option>Jamnagar</option>
+                <option>Junagadh</option>
+                <option>Kolkata</option>
+                <option>Morbi</option>
+                <option>Mumbai</option>
+                <option>Other</option>
+                <option>Porbandar</option>
+                <option>Pune</option>
+                <option>Rajkot</option>
+                <option>Surat</option>
+                <option>Vadodara</option>
+              </select>
+            </div>
+            <div class="sm:col-span-2">
+              <label class="inline-flex items-start gap-3 text-sm text-white/80">
+                <input type="checkbox" id="tos" class="mt-1 h-4 w-4 rounded border-white/20 bg-neutral-900/60" required />
+                I agree to receive a one‑time invite and updates about BookSlotz. No spam.
+              </label>
+            </div>
+          </div>
+          <div class="mt-6 flex items-center gap-4">
+            <button id="submitBtn" type="submit" class="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-500 px-6 py-3 font-semibold text-neutral-900 shadow-glow transition hover:translate-y-[-1px] hover:bg-brand-400">
+              <svg id="spinner" class="hidden h-5 w-5 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path></svg>
+              Join the waitlist
+            </button>
+            <p id="formMsg" class="text-sm text-white/70"></p>
+          </div>
+          <!-- Honeypot -->
+          <input type="text" name="company" id="company" class="hidden" tabindex="-1" autocomplete="off" />
+        </form>
+      </div>
     </div>
+  </section>
 
-    <div>
-      <label for="email" class="mb-1 block text-sm text-white/80">Email</label>
-      <input id="email" name="email" type="email" required autocomplete="email"
-        class="w-full rounded-xl border border-white/10 bg-neutral-900/60 px-4 py-3 text-white placeholder-white/40 outline-none transition focus:ring-2"
-        placeholder="you@example.com" />
-    </div>
-
-    <div>
-      <label for="phone" class="mb-1 block text-sm text-white/80">Mobile</label>
-      <!-- relaxed: allows +91, spaces, dashes -->
-      <input id="phone" name="phone" type="tel"
-        pattern="^(\+?91[\s-]?)?[0-9\s-]{10,}$"
-        class="w-full rounded-xl border border-white/10 bg-neutral-900/60 px-4 py-3 text-white placeholder-white/40 outline-none transition focus:ring-2"
-        placeholder="+91 98xxxxxx10" />
-      <p class="mt-1 text-xs text-white/60">Indian numbers supported. Use +91 or 10-digit format.</p>
-    </div>
-
-    <div class="sm:col-span-2">
-      <label class="inline-flex items-start gap-3 text-sm text-white/80">
-        <input type="checkbox" id="tos" name="consent"
-          class="mt-1 h-4 w-4 rounded border-white/20 bg-neutral-900/60" required />
-        I agree to receive a one-time invite and updates about BookSlotz. No spam.
-      </label>
-    </div>
-  </div>
-
-  <div class="mt-6 flex items-center gap-4">
-    <button type="submit"
-      class="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-500 px-6 py-3 font-semibold text-neutral-900 shadow-glow transition hover:translate-y-[-1px] hover:bg-brand-400">
-      Join the waitlist
-    </button>
-    <p class="text-sm text-white/70"></p>
-  </div>
-
-  <!-- simple honeypot -->
-  <input type="text" name="company" id="company" class="hidden" tabindex="-1" autocomplete="off" />
-</form>
-
+  <!-- Company section for reviewers -->
+  <section id="company" class="py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-8 rounded-3xl border border-white/10 bg-white/5 p-8 ring-1 ring-white/10 lg:grid-cols-3">
+        <div>
+          <h3 class="text-xl font-semibold">Company</h3>
+          <p class="mt-3 text-sm text-white/80">
+            BookSlotz
+          </p>
+          <p class="mt-1 text-sm text-white/80">
+            <span class="font-medium">Registered Address:</span> T5 Balaji Stone, Porbandar, Gujarat, 360-575, India
+          </p>
+         
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold">Contact</h3>
+          <ul class="mt-3 space-y-2 text-sm text-white/80">
+            <li><span class="font-medium">Support Email:</span> <a class="hover:text-white" href="mailto:hello@bookslotz.app">info@bookslotz.in</a></li>
+            <li><span class="font-medium">Phone:</span> <a class="hover:text-white" href="tel:+9198xxxxxx10">+91 8000071714</a></li>
+            <li><span class="font-medium">Hours:</span> Mon–Sat, 10:00–18:00 IST</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold">Compliance</h3>
+          <ul class="mt-3 space-y-2 text-sm text-white/80">
+            <li>Data handling per <a href="#privacy" class="underline">Privacy Policy</a></li>
+            <li>Terms of Use outlined in <a href="#terms" class="underline">Terms & Conditions</a></li>
+            <li>Consumer grievance: <a href="mailto:grievance@bookslotz.app" class="underline">info@bookslotz.in</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -317,7 +368,7 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer with company details surfaced -->
   <footer class="border-t border-white/10 bg-neutral-950/80 py-10">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -329,33 +380,50 @@
             <span class="text-lg font-semibold">BookSlotz</span>
           </div>
           <p class="mt-3 text-sm text-white/70">Play More. Plan Less.</p>
+          <p class="mt-3 text-xs text-white/60">
+            BookSlotz
+          </p>
+          <p class="mt-1 text-xs text-white/60">Regd. Address: T5 Balaji Stone, Porbandar, Gujarat, 360-575, India</p>
+          
         </div>
         <div>
           <h4 class="font-semibold">Company</h4>
           <ul class="mt-3 space-y-2 text-sm text-white/70">
             <li><a class="hover:text-white" href="#features">Features</a></li>
             <li><a class="hover:text-white" href="#how">How it works</a></li>
+            <li><a class="hover:text-white" href="#company">Company</a></li>
             <li><a class="hover:text-white" href="#early">Early Access</a></li>
           </ul>
         </div>
         <div>
           <h4 class="font-semibold">Contact</h4>
           <ul class="mt-3 space-y-2 text-sm text-white/70">
-            <li><a class="hover:text-white" href="mailto:hello@bookslotz.app">hello@bookslotz.app</a></li>
+            <li><a class="hover:text-white" href="mailto:hello@bookslotz.app">info@bookslotz.in</a></li>
+            <li><a class="hover:text-white" href="tel:+9198xxxxxx10">+91 8000071714</a></li>
             <li><a class="hover:text-white" href="#">@bookslotz</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="font-semibold">Get the app</h4>
+          <h4 class="font-semibold">Legal</h4>
           <div class="mt-3 grid grid-cols-2 gap-3">
-            <a class="rounded-xl border border-white/10 bg-black/60 px-4 py-3 text-center text-sm" href="#">Play Store</a>
-            <a class="rounded-xl border border-white/10 bg-black/60 px-4 py-3 text-center text-sm" href="#">App Store</a>
+            <a class="rounded-xl border border-white/10 bg-black/60 px-4 py-3 text-center text-sm" href="#privacy">Privacy</a>
+            <a class="rounded-xl border border-white/10 bg-black/60 px-4 py-3 text-center text-sm" href="#terms">Terms</a>
           </div>
         </div>
       </div>
       <div class="mt-10 border-t border-white/10 pt-6 text-center text-xs text-white/60">© <span id="year"></span> BookSlotz. All rights reserved.</div>
     </div>
   </footer>
+
+  <!-- Legal docs (lightweight placeholders reviewers expect) -->
+  <section id="privacy" class="mx-auto max-w-4xl px-4 pb-16">
+    <h3 class="text-2xl font-semibold">Privacy Policy</h3>
+    <p class="mt-3 text-sm text-white/70">We collect your name, email, phone and city solely to notify you about BookSlotz launch and related updates. Data is processed via Web3Forms and stored in our CRM. We do not sell your data. For deletion requests, email <a href="mailto:privacy@bookslotz.app" class="underline">info@bookslotz.in</a>.</p>
+  </section>
+  <section id="terms" class="mx-auto max-w-4xl px-4 pb-20">
+    <h3 class="text-2xl font-semibold">Terms & Conditions</h3>
+    <p class="mt-3 text-sm text-white/70">By joining the waitlist, you consent to be contacted about product updates and early access. No payments are collected on this site. Final booking terms will be presented within the mobile apps.</p>
+  </section>
 
   <!-- Toast -->
   <div id="toast" class="pointer-events-none fixed inset-x-0 top-24 z-[60] mx-auto hidden max-w-md rounded-xl border border-white/10 bg-neutral-900/90 p-4 text-center text-sm ring-1 ring-white/20">
@@ -371,7 +439,7 @@
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Form handling (demo). Replace with real endpoint for production.
+    // Form handling -> Web3Forms
     const form = document.getElementById('waitlistForm');
     const btn = document.getElementById('submitBtn');
     const spinner = document.getElementById('spinner');
@@ -387,7 +455,11 @@
     form.addEventListener('submit', async (e)=>{
       e.preventDefault();
       formMsg.textContent='';
-      if (document.getElementById('company').value) { return; } // honeypot
+
+      // Honeypot
+      const company = document.getElementById('company').value.trim();
+      if (company) { return; }
+      document.getElementById('botcheck').value = company || '';
 
       // Simple validation
       const name = document.getElementById('name').value.trim();
@@ -398,15 +470,22 @@
       btn.disabled = true; spinner.classList.remove('hidden');
 
       try {
-        // Simulate successful submit and persist locally
-        const payload = { name, email, phone, city: document.getElementById('city').value, ts: new Date().toISOString() };
-        const list = JSON.parse(localStorage.getItem('bookslotz_waitlist') || '[]');
-        list.push(payload); localStorage.setItem('bookslotz_waitlist', JSON.stringify(list));
+        const formData = new FormData(form);
+        const res = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+        const data = await res.json();
 
-        form.reset();
-        showToast("You're on the list! We'll email you closer to launch.");
+        if (res.ok && data.success) {
+          form.reset();
+          showToast("You're on the list! We'll email you closer to launch.");
+        } else {
+          formMsg.textContent = data.message || 'Something went wrong. Please try again.';
+        }
       } catch(err){
-        formMsg.textContent = 'Something went wrong. Please try again.';
+        formMsg.textContent = 'Network error. Please try again.';
       } finally {
         btn.disabled = false; spinner.classList.add('hidden');
       }
